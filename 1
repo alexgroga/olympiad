@@ -1,0 +1,27 @@
+a = input()
+circle = 0
+square = 0
+figure = 0
+flag=0
+for i in a:
+ if(i == '{' ):
+  circle += 1
+ if(i == '}'):
+  circle -=1
+ if (i == '(') :
+  square += 1
+ if (i == ')'):
+  square -=1
+ if(i == '['):
+  figure += 1
+ if(i == ']'):
+  figure -=1
+ if(figure < 0 or square <0 or circle < 0):
+  flag = 1
+  break
+if(circle == 0) and (square == 0) and (figure == 0) :
+ print('correct')
+elif flag == 1:
+ print('incorrect')
+else:
+ print('incorrect')
